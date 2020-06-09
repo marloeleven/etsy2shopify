@@ -88,7 +88,7 @@ select, input {
 }
 
 .left img {
-  width: 130px;
+  width: 250px;
 }
 
 #container:not(.expanded) .left li.nav > .fa-angle-double-left,
