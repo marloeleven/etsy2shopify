@@ -1,90 +1,125 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shopify Converter</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shopify Converter</title>
 
-  <link rel="stylesheet" type="text/css" href="./src/lib/bulma/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href="./src/css/main.css">
-  <script type="text/javascript" src="./src/lib/bulma/all.js"></script>
-</head>
-<body>
-  <div id="container" class="expanded">
-    <ul class="left">
-      <li><span>Vendor:</span><input type="text" name="vendor"></li>
-      <li><span>Type:</span><input type="text" name="type"></li>
-      <li>
-        <span>Publish:</span>
-        <select name="publish">
-          <option value="TRUE">True</option>
-          <option value="FALSE" selected="selected">False</option>
-        </select>
-      </li>
-      <li><span>Varian SKU:</span> <input type="text" name="sku" value=""> </li>
-      <li><span>Varian Grams:</span> <input type="text" name="grams" value="0"> </li>
-      <li><span>Varian Tracker:</span> <input type="text" name="tracker" value="shopify"> </li>
-      <li><span>Varian Quantity:</span> <input type="text" name="quantity" value="1"> </li>
-      <li>
-        <span>Varian Policy:</span>
-        <select name="policy">
-          <option value="continue">Continue</option>
-          <option value="deny" selected="selected">Deny</option>
-        </select>
-      </li>
-      <li><span>Varian Fulfillment:</span> <input type="text" name="fulfillment" value="manual"> </li>
-      <li>
-        <span>Varian Requires Shipping:</span>
-        <select name="requires_shipping">
-          <option value="TRUE">True</option>
-          <option value="FALSE" selected="selected">False</option>
-        </select>
-      </li>
-      <li>
-        <span>Varian Taxable:</span>
-        <select name="taxable">
-          <option value="TRUE">True</option>
-          <option value="FALSE" selected="selected">False</option>
-        </select>
-      </li>
-      <li><span>Varian Unit:</span> <input type="text" name="unit" value="kg"> </li>
-      <li>
-        <span>Gift Card:</span>
-        <select name="giftcard">
-          <option value="TRUE">True</option>
-          <option value="FALSE" selected="selected">False</option>
-        </select>
-      </li>
-      <li class="file-upload-wrapper">
-        <a href="#" class="filename button is-info">
-        </a>
-        <a href="#" class="upload button is-link">
-          <i class="far fa-file-alt"></i>&nbsp;&nbsp;Upload a File
-        </a>
-        <input type="file" name="file">
-      </li>
-      <li><button name="export" class="button is-success" disabled="disabled">Export</button></li>
-      <li class="advertisement hide">
-        <span>You can support me by donating to my Paypal account. Click the image to donate.</span>
-        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VG6YBJ2R8MH4E" target="_blank"><img src="./src/images/donate.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online."></a>
-      </li>
-      <li class="contact hide">
-        <a href="https://www.facebook.com/marloeleven" target="_blank">
-          <i class="fab fa-facebook-f"></i> https://www.fb.com/marloeleven
-        </a>
-      </li>
-      <li class="nav">
-        <i class="fas fa-angle-double-left"></i>
-        <i class="fas fa-angle-double-right"></i>
-      </li>
-    </ul>
-    <div id="tableWrapper">
-      <div class="uploadDrag">
-        <i class="fas fa-angle-double-down"></i><br/>
-        <a href="#" class='upload'>Choose a file</a> or drag it here
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./src/lib/bulma/bulma.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./src/css/main.css" />
+    <script type="text/javascript" src="./src/lib/bulma/all.js"></script>
+  </head>
+  <body>
+    <div id="container" class="expanded">
+      <ul class="left">
+        <li><span>Vendor:</span><input type="text" name="vendor" /></li>
+        <li><span>Type:</span><input type="text" name="type" /></li>
+        <li>
+          <span>Publish:</span>
+          <select name="publish">
+            <option value="TRUE">True</option>
+            <option value="FALSE" selected="selected">False</option>
+          </select>
+        </li>
+        <li>
+          <span>Varian SKU:</span> <input type="text" name="sku" value="" />
+        </li>
+        <li>
+          <span>Varian Grams:</span>
+          <input type="text" name="grams" value="0" />
+        </li>
+        <li>
+          <span>Varian Tracker:</span>
+          <input type="text" name="tracker" value="shopify" />
+        </li>
+        <li>
+          <span>Varian Quantity:</span>
+          <input type="text" name="quantity" value="1" />
+        </li>
+        <li>
+          <span>Varian Policy:</span>
+          <select name="policy">
+            <option value="continue">Continue</option>
+            <option value="deny" selected="selected">Deny</option>
+          </select>
+        </li>
+        <li>
+          <span>Varian Fulfillment:</span>
+          <input type="text" name="fulfillment" value="manual" />
+        </li>
+        <li>
+          <span>Varian Requires Shipping:</span>
+          <select name="requires_shipping">
+            <option value="TRUE">True</option>
+            <option value="FALSE" selected="selected">False</option>
+          </select>
+        </li>
+        <li>
+          <span>Varian Taxable:</span>
+          <select name="taxable">
+            <option value="TRUE">True</option>
+            <option value="FALSE" selected="selected">False</option>
+          </select>
+        </li>
+        <li>
+          <span>Varian Unit:</span> <input type="text" name="unit" value="kg" />
+        </li>
+        <li>
+          <span>Gift Card:</span>
+          <select name="giftcard">
+            <option value="TRUE">True</option>
+            <option value="FALSE" selected="selected">False</option>
+          </select>
+        </li>
+        <li class="file-upload-wrapper">
+          <a href="#" class="filename button is-info"> </a>
+          <a href="#" class="upload button is-link">
+            <i class="far fa-file-alt"></i>&nbsp;&nbsp;Upload a File
+          </a>
+          <input type="file" name="file" />
+        </li>
+        <li>
+          <button name="export" class="button is-success" disabled="disabled">
+            Export
+          </button>
+        </li>
+        <li class="advertisement">
+          <span
+            >You can support me by donating to my Paypal account. Click the
+            image to donate.</span
+          >
+          <a
+            href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VG6YBJ2R8MH4E"
+            target="_blank"
+            ><img
+              src="./src/images/donate.png"
+              border="0"
+              name="submit"
+              alt="PayPal – The safer, easier way to pay online."
+          /></a>
+        </li>
+        <li class="contact">
+          <a href="https://www.facebook.com/marloeleven" target="_blank">
+            <i class="fab fa-facebook-f"></i> https://www.fb.com/marloeleven
+          </a>
+        </li>
+        <li class="nav">
+          <i class="fas fa-angle-double-left"></i>
+          <i class="fas fa-angle-double-right"></i>
+        </li>
+      </ul>
+      <div id="tableWrapper">
+        <div class="uploadDrag">
+          <i class="fas fa-angle-double-down"></i><br />
+          <a href="#" class="upload">Choose a file</a> or drag it here
+        </div>
+        <table id="preview"></table>
       </div>
-      <table id="preview"></table>
     </div>
-  </div>
-<script type="text/javascript" src="build.js"></script></body>
+    <script type="text/javascript" src="build.js"></script>
+  </body>
 </html>
