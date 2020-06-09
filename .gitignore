@@ -1,0 +1,9 @@
+.hg/
+app/
+dist/
+node_modules/
+release-builds/
+*.csv
+*.rar
+.hgignore
+Electron.sublime-build
