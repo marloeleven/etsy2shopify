@@ -18,7 +18,7 @@
     "create-installer-win": "node installer/windows/createinstaller.js"
   },
   "devDependencies": {
-    "electron": "^1.8.4",
+    "electron": "^11.5.0",
     "electron-packager": "^11.2.0",
     "html-webpack-plugin": "^3.1.0",
     "uglifyjs-webpack-plugin": "^1.2.4",
